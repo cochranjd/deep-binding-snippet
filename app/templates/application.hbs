@@ -1,3 +1,22 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+Apples
+<ul>
+{{#each apple in model.apples}}
+    <li>
+        <ul>
+            <li>DATA: {{apple.data.id}} - {{apple.data.name}}</li>
+            <li>POS: {{apple.position.x}}, {{apple.position.y}}</li>
+        </ul>
+    </li>
+{{/each}}
+</ul>
 
-{{outlet}}
+Oranges
+{{#each orange in model.oranges}}
+    <li>
+        <ul>
+            <li>DATA: {{orange.data.id}} - {{orange.data.field1}} - {{orange.data.field2}}</li>
+        </ul>
+    </li>
+{{/each}}
+
+<h3>Changes: {{changes}}</h3>
